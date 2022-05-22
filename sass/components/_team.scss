@@ -1,0 +1,108 @@
+/* OUR TEAM */
+.team {
+  padding-top: 94px;
+  padding-bottom: 94px;
+  background-color: $secondary-background-color;
+  &__title {
+    color: $title-text-color;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 42px;
+    text-align: center;
+    letter-spacing: 0.03em;
+    margin-bottom: 50px;
+  }
+  &__list {
+    display: flex;
+  }
+}
+
+.team-card {
+  align-items: center;
+  max-width: 270px;
+
+  background-color: $primary-background-color;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+  text-align: center;
+  & + & {
+    margin-left: 30px;
+  }
+}
+
+.team-card__img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+.team-card__thumb {
+  padding: 30px 0;
+}
+.team-card__title {
+  color: $title-text-color;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+
+  text-align: center;
+  letter-spacing: 0.03em;
+  margin-bottom: 10px;
+}
+.team-card__text {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+
+  text-align: center;
+  letter-spacing: 0.03em;
+  margin-bottom: 16px;
+}
+.team-socials {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.team-socials__item {
+  width: 44px;
+  height: 44px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  & + & {
+    margin-left: 10px;
+  }
+}
+
+.team-socials__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  background-color: $primary-background-color;
+  color: $icons-color;
+  fill: currentColor;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    background-color: $accent-color;
+    color: $primary-background-color;
+    fill: currentColor;
+
+    border-radius: 50%;
+  }
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+}
+
+/* END OUR TEAM */
