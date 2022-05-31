@@ -8,6 +8,7 @@ body {
   line-height: 1.71;
   letter-spacing: 0.03em;
 }
+
 .portfolio-body {
   background-color: $primary-background-color;
 }
@@ -26,11 +27,18 @@ a {
   text-decoration: none;
 }
 .container {
-  // width: 1200px;
-  max-width: 480px;
   margin-left: auto;
   margin-right: auto;
   padding: 0 15px;
+  @media screen and (min-width: 480px) {
+    width: 480px;
+  }
+  @media screen and (min-width: 768px) {
+    width: 768px;
+  }
+  @media screen and (min-width: 1200px) {
+    width: 1200px;
+  }
 }
 .visually-hidden {
   position: absolute;

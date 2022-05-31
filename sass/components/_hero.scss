@@ -1,15 +1,54 @@
 /* HERO */
-.hero {
-  max-width: 1600px;
-  margin: 0 auto;
-  padding: 200px 0;
-  background-color: $background-color-hero-footer;
-  background-image: linear-gradient(#2f303a66 40%, #2f303a66 40%),
-    url("../images/Img-hero.jpg");
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
 
+.hero {
+  text-align: center;
+  height: 400px;
+  padding: 118px 0;
+  @media screen and (max-width: 767px) {
+    background-image: linear-gradient(to right, #2f303a66, #2f303a66),
+      url(../images/img/hero-mobile.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: linear-gradient(to right, #2f303a66, #2f303a66),
+        url(../images/img/hero-mobile@2x.jpg);
+    }
+  }
+  @media (min-width: 768px) {
+    padding: 118px 0;
+    background-image: linear-gradient(to right, #2f303a66, #2f303a66),
+      url(../images/img/hero-tablet.jpg);
+    background-size: cover;
+    background-position: center;
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: linear-gradient(to right, #2f303a66, #2f303a66),
+        url(../images/img/hero-tablet@2x.jpg);
+      background-position: center;
+      background-size: cover;
+    }
+  }
+  @media (min-width: 1200px) {
+    padding: 200px 0;
+    height: 600px;
+    background-image: linear-gradient(to right, #2f303a66, #2f303a66),
+      url(../images/img/hero-desctop.jpg);
+    background-position: center;
+    background-size: cover;
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: linear-gradient(to right, #2f303a66, #2f303a66),
+        url(../images/img/hero-desctop@2x.jpg);
+      background-position: center;
+      background-size: cover;
+    }
+  }
   &__title {
     color: $primary-background-color;
 
@@ -22,9 +61,16 @@
     width: 696px;
     margin: 0 auto;
     margin-bottom: 30px;
+    @media screen and (max-width: 1199px) {
+      width: 100%;
+      font-size: 26px;
+      line-height: 42px;
+      text-align: center;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
   }
 }
-
 .button {
   display: block;
   margin: 0 auto;
