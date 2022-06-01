@@ -1865,7 +1865,7 @@ img {
 .swiper {
   width: 100%;
   height: 100%;
-  background-color: tomato;
+  background-color: #fef3e4;
 }
 
 .swiper-wrapper {
@@ -1877,7 +1877,37 @@ img {
           justify-content: center;
 }
 
+.swiper-slide__1, .swiper-slide__3 {
+  -ms-flex-item-align: start;
+      -ms-grid-row-align: start;
+      align-self: start;
+}
+
+@media screen and (max-width: 769px) {
+  .swiper-slide__1, .swiper-slide__3 {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 770px) {
+  .swiper-slide + .swiper-slide {
+    margin-left: 32px;
+  }
+}
+
+.swiper-slide__2 {
+  width: 280px;
+  height: 100%;
+}
+
+@media screen and (min-width: 770px) {
+  .swiper-slide__2 {
+    margin-top: 60px;
+  }
+}
+
 .feature__title {
+  margin-bottom: 13px;
   font-family: "Caveat Brush";
   font-style: normal;
   font-weight: 400;
@@ -1887,37 +1917,46 @@ img {
   color: #2e2520;
 }
 
-.reviews-card__img {
+.review-card__img {
   display: block;
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-}
-
-@media screen and (max-width: 769px) {
-  .reviews-card__slide--1 {
-    display: none;
-  }
-}
-
-@media screen and (max-width: 769px) {
-  .reviews-card__slide--3 {
-    display: none;
-  }
-}
-
-.reviews-card__icon + .reviews-card__icon {
-  margin-left: 4px;
+  border-radius: 50%;
 }
 
 .reviews-card__stars {
+  margin: 8px auto;
+  width: 136px;
+  height: 24px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  color: #ab816c;
+  fill: currentColor;
+}
+
+.reviews-card__stars--icon {
   display: block;
 }
 
+.reviews-card__stars--icon + .reviews-card__stars--icon {
+  margin-left: 4px;
+}
+
+.reviews-card__stars--icon-empty {
+  fill: #fef3e4;
+}
+
 .reviews-card__name {
-  width: 152px;
-  height: 17px;
   font-family: "Montserrat";
   font-style: italic;
   font-weight: 500;
@@ -1925,11 +1964,13 @@ img {
   line-height: 17px;
   text-align: center;
   color: #2e2520;
+  margin-bottom: 8px;
 }
 
 .reviews-card__text {
-  width: 704px;
-  height: 120px;
+  width: 280px;
+  height: 220px;
+  margin: 0 auto;
   font-family: "Montserrat";
   font-style: normal;
   font-weight: 400;
@@ -1937,5 +1978,9 @@ img {
   line-height: 20px;
   text-align: center;
   color: #2e2520;
+}
+
+.reviews-card__pagination {
+  margin: 32px auto;
 }
 /*# sourceMappingURL=main.css.map */
